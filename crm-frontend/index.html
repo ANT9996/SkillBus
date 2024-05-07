@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRM - Skillbus</title>
+  <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script type="module" src="main.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__logo">skb.</div>
+
+    <label for="searchField" class="header__search search">
+      <input class="search__input" type="text" id="searchField" required>
+      <span class="search__text">Введите запрос</span>
+      <ul id="searchResults" class="search__results"></ul>
+    </label>
+  </header>
+
+  <main class="container content">
+    <h2 class="title">Клиенты</h2>
+
+    <div class="clients">
+      <div class="list-container">
+        <div class="clients__sort sort grid">
+          <div class="sort__field sort__field-active" id="sortId">
+            <span>ID</span>
+            <div class="svg-sort-arrow"></div>
+          </div>
+          <div class="sort__field" id="sortFio">
+            <span>Фамилия Имя Отчество</span>
+            <div class="svg-sort-arrow sort-desc"></div>
+          </div>
+          <div class="sort__field" id="sortCreatedAt">
+            <span>Дата и время<br>создания</span>
+            <div class="svg-sort-arrow sort-desc"></div>
+          </div>
+          <div class="sort__field" id="sortUpdatedAt">
+            <span>Последние<br>изменения</span>
+            <div class="svg-sort-arrow sort-desc"></div>
+          </div>
+          <div class="sort__field sort__field-disabled">Контакты</div>
+          <div class="sort__field sort__field-disabled">Действия</div>
+        </div>
+        <ul id="clientsList" class="clients__list list loading-container">
+          <li class="loading svg-loading"></li>
+        </ul>
+      </div>
+      <div class="clients__add-container">
+        <button class="clients__add-button" id="addClient">
+          <span class="svg-add-client"></span>
+          <span>Добавить клиента</span>
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <div id="modalContainer" class="modal-container d-none">
+
+  </div>
+</body>
+
+</html>
